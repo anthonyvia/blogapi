@@ -2,12 +2,18 @@
 using System.Net.Http;
 using System.Web.Http;
 using blogapi.Models;
+using Common;
 
 namespace blogapi.Controllers
 {
     public class PostController : ApiController
     {
-        public HttpResponseMessage CreatePost(Post post = null)
+        public PostController(IPostService postService)
+        {
+            m_postService = postService;
+        }
+
+        public HttpResponseMessage CreatePost(PostDto post = null)
         {
             if (post == null)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "post cannot be null");
@@ -20,7 +26,17 @@ namespace blogapi.Controllers
             if (post.Title.Length > Utility.Constants.MaxPostTitleLength)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, string.Format("post title length cannot exceed {0} characters", Utility.Constants.MaxPostTitleLength));
 
-            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "create post not allowed");
+            Post createdPost = m_postService.CreatePost(new Post(post.Title, post.Body));
+
+            return Request.CreateResponse(
+                HttpStatusCode.Created,
+                new PostDto
+                {
+                    Body = createdPost.Body,
+                    Title = createdPost.Title
+                });
         }
+
+        private readonly IPostService m_postService;
     }
 }
