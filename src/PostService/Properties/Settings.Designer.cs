@@ -26,7 +26,7 @@ namespace PostService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1; database=blog; uid=root;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1; database=posts; uid=root;")]
         public string MysqlConnectionString {
             get {
                 return ((string)(this["MysqlConnectionString"]));
