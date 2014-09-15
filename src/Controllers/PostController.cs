@@ -13,7 +13,8 @@ namespace blogapi.Controllers
             m_postService = postService;
         }
 
-        public HttpResponseMessage CreatePost(PostDto post = null)
+        [HttpPost]
+        public HttpResponseMessage CreatePost(PostDto post)
         {
             if (post == null)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "post cannot be null");
