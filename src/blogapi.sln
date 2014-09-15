@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostService", "PostService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2244F180-EE77-48FF-BE1D-DB56FF8D4761}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{580248A9-2813-4618-ADE2-10C30A181039}"
+	ProjectSection(SolutionItems) = preProject
+		001_CreatePostSchema.sql = 001_CreatePostSchema.sql
+		002_CreatePostsTable.sql = 002_CreatePostsTable.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
