@@ -1,5 +1,7 @@
 ﻿using System.Web.Http;
 using System.Web.Routing;
+using StructureMap;
+using WebApiContrib.IoC.StructureMap;
 
 namespace blogapi
 {
@@ -10,6 +12,9 @@ namespace blogapi
     {
         protected void Application_Start()
         {
+            IContainer container = TypeRegistry.RegisterTypes();
+
+            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapResolver(container);
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalConfiguration.Configuration);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

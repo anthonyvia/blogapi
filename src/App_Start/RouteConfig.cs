@@ -7,7 +7,6 @@ namespace blogapi
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.Ignore("{resource}.axd/{*pathInfo}");
             MapPostRoutes(routes);
         }
 
