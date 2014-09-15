@@ -1,13 +1,11 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Http;
 
 namespace blogapi
 {
     public class FilterConfig
     {
-        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        public static void RegisterGlobalFilters(HttpConfiguration config)
         {
-            filters.Add(new HandleErrorAttribute());
         }
     }
 }

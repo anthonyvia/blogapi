@@ -1,4 +1,4 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Http;
 using System.Web.Routing;
 
 namespace blogapi
@@ -7,15 +7,15 @@ namespace blogapi
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.Ignore("{resource}.axd/{*pathInfo}");
             MapPostRoutes(routes);
         }
 
         private static void MapPostRoutes(RouteCollection routes)
         {
-            routes.MapRoute(
+            routes.MapHttpRoute(
                 name: "CreatePost",
-                url: "post",
+                routeTemplate: "post",
                 defaults: new { controller = "Post", action = "CreatePost" }
             );
         }
