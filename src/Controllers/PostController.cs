@@ -1,10 +1,10 @@
 ﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using blogapi.Models;
+using BlogApi.Models;
 using Common;
 
-namespace blogapi.Controllers
+namespace BlogApi.Controllers
 {
     public class PostController : ApiController
     {

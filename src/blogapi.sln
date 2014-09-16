@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blogapi", "blogapi.csproj", "{09339535-4B76-4EF8-9F0F-BDFEC88D83B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApi", "BlogApi.csproj", "{09339535-4B76-4EF8-9F0F-BDFEC88D83B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{E0D84AC8-DB17-4619-9A96-4C517CD22106}"
 EndProject
@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostService", "PostService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2244F180-EE77-48FF-BE1D-DB56FF8D4761}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{580248A9-2813-4618-ADE2-10C30A181039}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{FC351F31-18C2-4E7A-BB34-C7187D58DE55}"
 	ProjectSection(SolutionItems) = preProject
-		001_CreatePostSchema.sql = 001_CreatePostSchema.sql
-		002_CreatePostsTable.sql = 002_CreatePostsTable.sql
-		003_AddDateCreatedColumn.sql = 003_AddDateCreatedColumn.sql
+		Database\001_CreatePostSchema.sql = Database\001_CreatePostSchema.sql
+		Database\002_CreatePostsTable.sql = Database\002_CreatePostsTable.sql
+		Database\003_AddDateCreatedColumn.sql = Database\003_AddDateCreatedColumn.sql
 	EndProjectSection
 EndProject
 Global

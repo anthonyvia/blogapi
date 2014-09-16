@@ -1,7 +1,7 @@
 ﻿using StructureMap;
 using Common;
 
-namespace blogapi
+namespace BlogApi
 {
     public class TypeRegistry
     {

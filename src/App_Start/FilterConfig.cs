@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace blogapi
+namespace BlogApi
 {
     public class FilterConfig
     {

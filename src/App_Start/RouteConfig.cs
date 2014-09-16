@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using System.Web.Routing;
 
-namespace blogapi
+namespace BlogApi
 {
     public class RouteConfig
     {

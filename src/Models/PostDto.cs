@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace blogapi.Models
+namespace BlogApi.Models
 {
     public class PostDto
     {
