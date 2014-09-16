@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{58
 	ProjectSection(SolutionItems) = preProject
 		001_CreatePostSchema.sql = 001_CreatePostSchema.sql
 		002_CreatePostsTable.sql = 002_CreatePostsTable.sql
+		003_AddDateCreatedColumn.sql = 003_AddDateCreatedColumn.sql
 	EndProjectSection
 EndProject
 Global
