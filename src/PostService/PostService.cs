@@ -18,7 +18,7 @@ namespace PostService
 
             const string query = @"INSERT INTO
 posts.posts (body, title, date_created)
-VALUES ('@body', '@title', @dateCreated);
+VALUES (@body, @title, @dateCreated);
 
 SELECT LAST_INSERT_ID();";
 
