@@ -27,12 +27,13 @@ namespace blogapi.Controllers
             if (post.Title.Length > Utility.Constants.MaxPostTitleLength)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, string.Format("post title length cannot exceed {0} characters", Utility.Constants.MaxPostTitleLength));
 
-            Post createdPost = m_postService.CreatePost(new Post(post.Title, post.Body));
+            Post createdPost = m_postService.CreatePost(new Post(null, post.Title, post.Body));
 
             return Request.CreateResponse(
                 HttpStatusCode.Created,
                 new PostDto
                 {
+                    Id = createdPost.Id,
                     Body = createdPost.Body,
                     Title = createdPost.Title
                 });
