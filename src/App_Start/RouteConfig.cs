@@ -17,6 +17,12 @@ namespace BlogApi
                 routeTemplate: "post",
                 defaults: new { controller = "Post", action = "CreatePost" }
             );
+
+            routes.MapHttpRoute(
+                name: "GetPost",
+                routeTemplate: "post/{id}",
+                defaults: new { controller = "post", action = "GetPost" }
+            );
         }
     }
 }

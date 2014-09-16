@@ -40,6 +40,28 @@ namespace BlogApi.Controllers
                 });
         }
 
+        [HttpGet]
+        public HttpResponseMessage GetPost(string id = null)
+        {
+            if (string.IsNullOrWhiteSpace(id))
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "postId is required");
+
+            Post post = m_postService.GetPost(id);
+
+            if (post == null)
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, string.Format("post {0} not found", id));
+
+            return Request.CreateResponse(
+                HttpStatusCode.OK,
+                new PostDto
+                {
+                    Id = post.Id,
+                    Body = post.Body,
+                    Title = post.Title,
+                    DateCreated = post.DateCreated
+                });
+        }
+
         private readonly IPostService m_postService;
     }
 }
