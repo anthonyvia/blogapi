@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{FC
 		Database\003_AddDateCreatedColumn.sql = Database\003_AddDateCreatedColumn.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC3538C2-888E-45BF-A2BA-848EF7C635E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostService.UnitTests", "..\tests\PostService.UnitTests\PostService.UnitTests.csproj", "{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtility", "..\tests\TestUtility\TestUtility.csproj", "{44EDF9F2-4DAE-4E37-812A-A55F112C06E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,8 +44,20 @@ Global
 		{2244F180-EE77-48FF-BE1D-DB56FF8D4761}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2244F180-EE77-48FF-BE1D-DB56FF8D4761}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2244F180-EE77-48FF-BE1D-DB56FF8D4761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EDF9F2-4DAE-4E37-812A-A55F112C06E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EDF9F2-4DAE-4E37-812A-A55F112C06E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EDF9F2-4DAE-4E37-812A-A55F112C06E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EDF9F2-4DAE-4E37-812A-A55F112C06E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91C61EA3-45B9-4D51-81A8-4A5A7B0C3F01} = {EC3538C2-888E-45BF-A2BA-848EF7C635E1}
+		{44EDF9F2-4DAE-4E37-812A-A55F112C06E0} = {EC3538C2-888E-45BF-A2BA-848EF7C635E1}
 	EndGlobalSection
 EndGlobal
