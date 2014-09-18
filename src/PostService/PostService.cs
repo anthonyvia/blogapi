@@ -38,7 +38,7 @@ SELECT LAST_INSERT_ID();";
                 transaction.Commit();
             }
 
-            return new Post(id.ToString(), post.Title, post.Body, dateCreated);
+            return GetPost(id.ToString());
         }
 
         public Post GetPost(string id)
